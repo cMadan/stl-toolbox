@@ -1,2 +1,4 @@
-# stl
-Visualizing and quantifying movement from pre-recorded videos: The spectral time-lapse (STL) algorithm
+# Spectral time-lapse (STL) Toolbox
+
+##Description
+The spectral time-lapse (STL) algorithm is designed to be a simple and efficient technique for analyzing and presenting both spatial and temporal information of animal movements within a two-dimensional image representation. The STL algorithm re-codes an animal's position at every time point with a time-specific color, and overlaid it over a reference frame of the video, to produce a summary image. It additionally incorporates automated motion tracking, such that the animal's position can be extracted and summary statistics such as path length and duration can be calculated, as well as instantaneous velocity and acceleration. This toolbox implements the STL algorithm as a MATLAB toolbox and allows for a large degree of end-user control and flexibility.
