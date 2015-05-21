@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>STL Toolbox by cMadan</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>STL Toolbox</h1>
+          <h2>Visualizing and quantifying movement from pre-recorded videos</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/cMadan/stl-toolbox/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/cMadan/stl-toolbox/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/cMadan/stl-toolbox" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a id="spectral-time-lapse-stl-toolbox" class="anchor" href="#spectral-time-lapse-stl-toolbox" aria-hidden="true"><span class="octicon octicon-link"></span></a>Spectral time-lapse (STL) Toolbox</h1>
+
+<h3>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h3>
+
+<p>The spectral time-lapse (STL) algorithm is designed to be a simple and efficient technique for analyzing and presenting both spatial and temporal information of animal movements within a two-dimensional image representation. The STL algorithm re-codes an animal's position at every time point with a time-specific color, and overlaid it over a reference frame of the video, to produce a summary image. It additionally incorporates automated motion tracking, such that the animal's position can be extracted and summary statistics such as path length and duration can be calculated, as well as instantaneous velocity and acceleration. This toolbox implements the STL algorithm as a MATLAB toolbox and allows for a large degree of end-user control and flexibility.</p>
+
+<h2>
+<a id="more-information" class="anchor" href="#more-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>More Information</h2>
+
+<p>The STL algorithm is described in detail here:</p>
+
+<p>Madan CR and Spetch ML. Visualizing and quantifying movement from pre-recorded videos: The spectral time-lapse (STL) algorithm. F1000Research 2014, 3:19 (doi: 10.12688/f1000research.3-19.v1)
+<a href="http://f1000research.com/articles/3-19/v1">http://f1000research.com/articles/3-19/v1</a></p>
+
+<p>The published version of the toolbox is also available on Zenodo:</p>
+
+<p>ZENODO: Spectral time-lapse (STL) Toolbox. doi: 10.5281/zenodo.7663
+<a href="https://zenodo.org/record/7663">https://zenodo.org/record/7663</a></p>
+
+<h3>
+<a id="illustration-of-the-stl-algorithm-and-examples-of-images-at-each-stage" class="anchor" href="#illustration-of-the-stl-algorithm-and-examples-of-images-at-each-stage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Illustration of the STL algorithm and examples of images at each stage</h3>
+
+<p><img src="https://raw.githubusercontent.com/cMadan/stl-toolbox/master/stl_workflow.gif" alt="STL algorithm workflow"></p>
+
+<h3>
+<a id="example-output" class="anchor" href="#example-output" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example output</h3>
+
+<pre><code>&gt;&gt; data = stltool('S-Video_20110718_1132.avi');
+
+Processing video file "S-Video_20110718_1132.avi"
+Reading from raw video (46 Frames)
+..............................................
+Video is being sampled at one position per 1.00 seconds (1.0 pps)
+Checking frames for motion (46 Frames)
+..............................................
+Colorizing frames (25 Frames)
+.........................
+Calculating spectral timelapse (STL) image
+STL generated ("STL_S-Video_20110718_1132.tif")
+STL summarizes 25.02 seconds of video
+Processing video file "S-Video_20110718_1132.avi"
+Reading from raw video (228 Frames)
+....................................................................................................................................................................................................................................
+Video is being sampled at one position per 0.20 seconds (5.0 pps)
+Checking frames for motion (228 Frames)
+....................................................................................................................................................................................................................................
+Detecting path
+Path calculated ("STLpath_S-Video_20110718_1132.tif")
+Total path length measured at 6.1424 m
+Total path took 25.43 s
+Velocity-acceleration plot generated ("STLvel_S-Video_20110718_1132.pdf")
+ans = 
+               config: [1x1 struct]
+                fname: 'S-Video_20110718_1132.avi'
+       framesPathKept: 127
+    framesPathSampled: 228
+        framesSTLKept: 25
+     framesSTLSampled: 46
+           pathLength: 6.1424
+             pathTime: 25.4251
+              ppsPath: 4.9951
+               ppsSTL: 0.9990
+              trackXY: [127x2 double]
+               velAcc: [1x125 double]
+               velVel: [1x126 double]
+            vidCDepth: 1
+               vidFPS: 29.9704
+            vidHeight: 480
+             vidWidth: 640
+</code></pre>
+        </section>
+
+        <footer>
+          STL Toolbox is maintained by <a href="https://github.com/cMadan">cMadan</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
