@@ -12,6 +12,54 @@ http://f1000research.com/articles/3-19/v1
 The published version of the toolbox is also available on Zenodo:
 
 ZENODO: Spectral time-lapse (STL) Toolbox. doi: 10.5281/zenodo.7663
+https://zenodo.org/record/7663
 
-### Illustration of the STL algorithm, the component stages, and examples of images at each stage
-![STL algorithm workflow](https://f1000researchdata.s3.amazonaws.com/manuscripts/3552/193aaf33-a169-4c5d-baa3-e400f0da1a85_figure2.gif)
+### Illustration of the STL algorithm and examples of images at each stage
+![STL algorithm workflow](https://raw.githubusercontent.com/cMadan/stl-toolbox/master/stl_workflow.gif)
+
+### Example output
+
+```
+>> data = stltool('S-Video_20110718_1132.avi');
+ 
+Processing video file "S-Video_20110718_1132.avi"
+Reading from raw video (46 Frames)
+..............................................
+Video is being sampled at one position per 1.00 seconds (1.0 pps)
+Checking frames for motion (46 Frames)
+..............................................
+Colorizing frames (25 Frames)
+.........................
+Calculating spectral timelapse (STL) image
+STL generated ("STL_S-Video_20110718_1132.tif")
+STL summarizes 25.02 seconds of video
+Processing video file "S-Video_20110718_1132.avi"
+Reading from raw video (228 Frames)
+....................................................................................................................................................................................................................................
+Video is being sampled at one position per 0.20 seconds (5.0 pps)
+Checking frames for motion (228 Frames)
+....................................................................................................................................................................................................................................
+Detecting path
+Path calculated ("STLpath_S-Video_20110718_1132.tif")
+Total path length measured at 6.1424 m
+Total path took 25.43 s
+Velocity-acceleration plot generated ("STLvel_S-Video_20110718_1132.pdf")
+ans = 
+               config: [1x1 struct]
+                fname: 'S-Video_20110718_1132.avi'
+       framesPathKept: 127
+    framesPathSampled: 228
+        framesSTLKept: 25
+     framesSTLSampled: 46
+           pathLength: 6.1424
+             pathTime: 25.4251
+              ppsPath: 4.9951
+               ppsSTL: 0.9990
+              trackXY: [127x2 double]
+               velAcc: [1x125 double]
+               velVel: [1x126 double]
+            vidCDepth: 1
+               vidFPS: 29.9704
+            vidHeight: 480
+             vidWidth: 640
+```
