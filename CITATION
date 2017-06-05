@@ -1,0 +1,17 @@
+# Citation details for stl-toolbox
+
+## APA
+
+Madan, C. R., & Spetch M. L. (2014). Visualizing and quantifying movement from pre-recorded videos: The spectral time-lapse (STL) algorithm. F1000Research 3, 9. doi: 10.12688/f1000research.3-19.v1
+
+## BiBTeX
+
+@article{MadaSpet2014,
+  author    = {Christopher R Madan and Marcia L Spetch},
+  title     = {Visualizing and quantifying movement from pre-recorded videos: The spectral time-lapse ({STL}) algorithm},
+  journal   = {F1000Research}
+  year      = {2014},
+  volume    = {3},
+  pages     = {9},
+  doi       = {10.12688/f1000research.3-19.v1},
+}
